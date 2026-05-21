@@ -8,6 +8,11 @@ import java.time.LocalDateTime;
 
 public class ProductMapper {
 
+  private ProductMapper() {
+    /* This utility class should not be instantiated */
+  }
+
+
   public static Product toEntity(ProductRequest request) {
     return Product.builder()
         .name(request.getName())

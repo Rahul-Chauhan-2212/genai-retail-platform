@@ -1,0 +1,46 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: auth-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/auth_db
+    username: postgres
+    password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: false
+
+jwt:
+  secret: mysecretkeymysecretkeymysecretkey
+  expiration: 86400000
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0 # 100% of requests are traced
+  otlp:
+    tracing:
+      # Explicitly disable the OTLP exporter
+      endpoint: none
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+  api-docs:
+    path: /v3/api-docs
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} [traceId=%X{trace_id:-}, spanId=%X{span_id:-}] - %msg%n"

@@ -1,0 +1,3 @@
+CREATE DATABASE product_db;
+
+CREATE DATABASE auth_db;

@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gateway-service
+
+jwt:
+  secret: mysecretkeymysecretkeymysecretkey
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0 # 100% of requests are traced
+  otlp:
+    tracing:
+      # Explicitly disable the OTLP exporter
+      endpoint: none
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
