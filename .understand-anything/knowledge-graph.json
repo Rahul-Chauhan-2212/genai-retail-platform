@@ -1,0 +1,1498 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "genai-retail-platform",
+    "languages": [
+      "java",
+      "yaml",
+      "xml",
+      "markdown",
+      "dockerfile",
+      "sql"
+    ],
+    "frameworks": [
+      "Spring Boot",
+      "Spring Cloud Gateway",
+      "PostgreSQL",
+      "Docker",
+      "OpenTelemetry",
+      "Maven"
+    ],
+    "description": "A microservices-based retail platform utilizing Spring Boot, Spring Cloud Gateway, and OpenTelemetry for distributed tracing.",
+    "analyzedAt": "2026-05-21T07:54:13.880Z",
+    "gitCommitHash": "4c4ebf8c53445db0a00a93a1b4599bd88b9471a3"
+  },
+  "nodes": [
+    {
+      "id": "service:product-service/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "product-service/Dockerfile",
+      "summary": "Docker configuration for the Product Service, using Eclipse Temurin JDK 25.",
+      "tags": [
+        "docker",
+        "infra",
+        "java",
+        "product-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:product-service/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "product-service/pom.xml",
+      "summary": "Maven project configuration for the Product Service, defining dependencies and build settings.",
+      "tags": [
+        "maven",
+        "config",
+        "dependencies",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:product-service/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "product-service/README.md",
+      "summary": "Placeholder README for the Product Service.",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:product-service/src/main/resources/application.yaml",
+      "type": "config",
+      "name": "application.yaml",
+      "filePath": "product-service/src/main/resources/application.yaml",
+      "summary": "Application configuration for the Product Service, including server port, datasource, and OpenTelemetry settings.",
+      "tags": [
+        "yaml",
+        "config",
+        "springboot"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:product-service/src/main/java/com/genai/retail/product/dto/ProductRequest.java",
+      "type": "file",
+      "name": "ProductRequest.java",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/dto/ProductRequest.java",
+      "summary": "DTO for product creation and update requests.",
+      "tags": [
+        "dto",
+        "java",
+        "pojo"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:product-service/src/main/java/com/genai/retail/product/dto/ProductRequest.java:ProductRequest",
+      "type": "class",
+      "name": "ProductRequest",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/dto/ProductRequest.java",
+      "summary": "Data Transfer Object for capturing product details in requests.",
+      "tags": [
+        "dto",
+        "java",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:product-service/src/main/java/com/genai/retail/product/dto/ProductPageResponse.java",
+      "type": "file",
+      "name": "ProductPageResponse.java",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/dto/ProductPageResponse.java",
+      "summary": "Paginated response DTO for product listings.",
+      "tags": [
+        "dto",
+        "java",
+        "pagination"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:product-service/src/main/java/com/genai/retail/product/dto/ProductPageResponse.java:ProductPageResponse",
+      "type": "class",
+      "name": "ProductPageResponse",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/dto/ProductPageResponse.java",
+      "summary": "Data Transfer Object for paginated product responses.",
+      "tags": [
+        "dto",
+        "java",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:product-service/src/main/java/com/genai/retail/product/dto/ProductResponse.java",
+      "type": "file",
+      "name": "ProductResponse.java",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/dto/ProductResponse.java",
+      "summary": "DTO representing a product in API responses.",
+      "tags": [
+        "dto",
+        "java",
+        "pojo"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:product-service/src/main/java/com/genai/retail/product/dto/ProductResponse.java:ProductResponse",
+      "type": "class",
+      "name": "ProductResponse",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/dto/ProductResponse.java",
+      "summary": "Data Transfer Object for product details in responses.",
+      "tags": [
+        "dto",
+        "java",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:product-service/src/main/java/com/genai/retail/product/repository/ProductRepository.java",
+      "type": "file",
+      "name": "ProductRepository.java",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/repository/ProductRepository.java",
+      "summary": "Spring Data JPA repository for Product entity.",
+      "tags": [
+        "repository",
+        "jpa",
+        "java",
+        "database"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:product-service/src/main/java/com/genai/retail/product/repository/ProductRepository.java:ProductRepository",
+      "type": "class",
+      "name": "ProductRepository",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/repository/ProductRepository.java",
+      "summary": "Interface for Product database operations.",
+      "tags": [
+        "repository",
+        "jpa",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:product-service/src/main/java/com/genai/retail/product/config/SwaggerConfig.java",
+      "type": "file",
+      "name": "SwaggerConfig.java",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/config/SwaggerConfig.java",
+      "summary": "OpenAPI/Swagger configuration for API documentation.",
+      "tags": [
+        "config",
+        "swagger",
+        "openapi",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:product-service/src/main/java/com/genai/retail/product/config/SwaggerConfig.java:SwaggerConfig",
+      "type": "class",
+      "name": "SwaggerConfig",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/config/SwaggerConfig.java",
+      "summary": "Configuration class for OpenAPI documentation.",
+      "tags": [
+        "config",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:product-service/src/main/java/com/genai/retail/product/config/SwaggerConfig.java:customOpenAPI",
+      "type": "function",
+      "name": "customOpenAPI",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/config/SwaggerConfig.java",
+      "summary": "Defines custom OpenAPI configuration for the service.",
+      "tags": [
+        "config",
+        "openapi"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:product-service/src/main/java/com/genai/retail/product/entity/Product.java",
+      "type": "file",
+      "name": "Product.java",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/entity/Product.java",
+      "summary": "JPA Entity representing a product in the system.",
+      "tags": [
+        "entity",
+        "jpa",
+        "java",
+        "database"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:product-service/src/main/java/com/genai/retail/product/entity/Product.java:Product",
+      "type": "class",
+      "name": "Product",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/entity/Product.java",
+      "summary": "Persistent entity class for Products.",
+      "tags": [
+        "entity",
+        "jpa",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:product-service/src/main/java/com/genai/retail/product/mapper/ProductMapper.java",
+      "type": "file",
+      "name": "ProductMapper.java",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/mapper/ProductMapper.java",
+      "summary": "Component for mapping between Product entities and DTOs.",
+      "tags": [
+        "mapper",
+        "java",
+        "util"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:product-service/src/main/java/com/genai/retail/product/mapper/ProductMapper.java:ProductMapper",
+      "type": "class",
+      "name": "ProductMapper",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/mapper/ProductMapper.java",
+      "summary": "Utility class for mapping Product entities to responses and vice versa.",
+      "tags": [
+        "mapper",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java",
+      "type": "file",
+      "name": "ProductController.java",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/controller/ProductController.java",
+      "summary": "REST Controller for Product-related API endpoints.",
+      "tags": [
+        "controller",
+        "rest",
+        "java",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java:ProductController",
+      "type": "class",
+      "name": "ProductController",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/controller/ProductController.java",
+      "summary": "Handles REST requests for product management.",
+      "tags": [
+        "controller",
+        "rest",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "endpoint:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java:create",
+      "type": "endpoint",
+      "name": "POST /api/products",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/controller/ProductController.java",
+      "summary": "Creates a new product.",
+      "tags": [
+        "api",
+        "create"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "endpoint:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java:getAll",
+      "type": "endpoint",
+      "name": "GET /api/products",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/controller/ProductController.java",
+      "summary": "Retrieves all products with pagination.",
+      "tags": [
+        "api",
+        "read"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "endpoint:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java:getById",
+      "type": "endpoint",
+      "name": "GET /api/products/{id}",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/controller/ProductController.java",
+      "summary": "Retrieves a product by its ID.",
+      "tags": [
+        "api",
+        "read"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "endpoint:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java:getByCategory",
+      "type": "endpoint",
+      "name": "GET /api/products/category/{category}",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/controller/ProductController.java",
+      "summary": "Retrieves products by category.",
+      "tags": [
+        "api",
+        "read"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "endpoint:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java:searchProducts",
+      "type": "endpoint",
+      "name": "GET /api/products/search",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/controller/ProductController.java",
+      "summary": "Searches for products by keyword.",
+      "tags": [
+        "api",
+        "search"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:product-service/src/main/java/com/genai/retail/product/ProductServiceApplication.java",
+      "type": "file",
+      "name": "ProductServiceApplication.java",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/ProductServiceApplication.java",
+      "summary": "Main entry point for the Product Service Spring Boot application.",
+      "tags": [
+        "application",
+        "springboot",
+        "java",
+        "entrypoint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:product-service/src/main/java/com/genai/retail/product/ProductServiceApplication.java:ProductServiceApplication",
+      "type": "class",
+      "name": "ProductServiceApplication",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/ProductServiceApplication.java",
+      "summary": "Main Spring Boot application class for Product Service.",
+      "tags": [
+        "application",
+        "springboot",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:product-service/src/main/java/com/genai/retail/product/service/ProductService.java",
+      "type": "file",
+      "name": "ProductService.java",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/service/ProductService.java",
+      "summary": "Service layer implementing business logic for product management.",
+      "tags": [
+        "service",
+        "business-logic",
+        "java"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:product-service/src/main/java/com/genai/retail/product/service/ProductService.java:ProductService",
+      "type": "class",
+      "name": "ProductService",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/service/ProductService.java",
+      "summary": "Business logic provider for products.",
+      "tags": [
+        "service",
+        "java"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:product-service/src/main/java/com/genai/retail/product/exception/ProductNotFoundException.java",
+      "type": "file",
+      "name": "ProductNotFoundException.java",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/exception/ProductNotFoundException.java",
+      "summary": "Custom exception thrown when a product is not found.",
+      "tags": [
+        "exception",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:product-service/src/main/java/com/genai/retail/product/exception/ProductNotFoundException.java:ProductNotFoundException",
+      "type": "class",
+      "name": "ProductNotFoundException",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/exception/ProductNotFoundException.java",
+      "summary": "Exception class for product-not-found scenarios.",
+      "tags": [
+        "exception",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:product-service/src/main/java/com/genai/retail/product/exception/GlobalExceptionHandler.java",
+      "type": "file",
+      "name": "GlobalExceptionHandler.java",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/exception/GlobalExceptionHandler.java",
+      "summary": "Global controller advice for handling exceptions across the Product Service.",
+      "tags": [
+        "exception-handling",
+        "controller-advice",
+        "java"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:product-service/src/main/java/com/genai/retail/product/exception/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "type": "class",
+      "name": "GlobalExceptionHandler",
+      "filePath": "product-service/src/main/java/com/genai/retail/product/exception/GlobalExceptionHandler.java",
+      "summary": "Centralized exception handling for REST controllers.",
+      "tags": [
+        "exception-handling",
+        "java"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:docker-compose.yaml",
+      "type": "config",
+      "name": "docker-compose.yaml",
+      "filePath": "docker-compose.yaml",
+      "summary": "Docker Compose file orchestrating multiple services (auth, product, gateway, databases, etc.).",
+      "tags": [
+        "docker-compose",
+        "infra",
+        "orchestration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "service:gateway-service/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "gateway-service/Dockerfile",
+      "summary": "Docker configuration for the Gateway Service.",
+      "tags": [
+        "docker",
+        "infra",
+        "gateway-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:gateway-service/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "gateway-service/pom.xml",
+      "summary": "Maven configuration for the Gateway Service.",
+      "tags": [
+        "maven",
+        "config",
+        "gateway-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:gateway-service/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "gateway-service/README.md",
+      "summary": "Placeholder README for the Gateway Service.",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:gateway-service/src/main/resources/application.yaml",
+      "type": "config",
+      "name": "application.yaml",
+      "filePath": "gateway-service/src/main/resources/application.yaml",
+      "summary": "Application configuration for the Gateway Service.",
+      "tags": [
+        "yaml",
+        "config",
+        "springboot",
+        "gateway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:gateway-service/src/main/java/com/genai/retail/gateway/util/JwtUtil.java",
+      "type": "file",
+      "name": "JwtUtil.java",
+      "filePath": "gateway-service/src/main/java/com/genai/retail/gateway/util/JwtUtil.java",
+      "summary": "Utility for JWT validation and claim extraction in the Gateway.",
+      "tags": [
+        "util",
+        "jwt",
+        "security",
+        "java"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:gateway-service/src/main/java/com/genai/retail/gateway/util/JwtUtil.java:JwtUtil",
+      "type": "class",
+      "name": "JwtUtil",
+      "filePath": "gateway-service/src/main/java/com/genai/retail/gateway/util/JwtUtil.java",
+      "summary": "JWT processing utility class.",
+      "tags": [
+        "util",
+        "jwt",
+        "java"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:gateway-service/src/main/java/com/genai/retail/gateway/config/SecurityConfig.java",
+      "type": "file",
+      "name": "SecurityConfig.java",
+      "filePath": "gateway-service/src/main/java/com/genai/retail/gateway/config/SecurityConfig.java",
+      "summary": "Security configuration for the Gateway, defining permit-all routes.",
+      "tags": [
+        "config",
+        "security",
+        "springboot",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:gateway-service/src/main/java/com/genai/retail/gateway/config/SecurityConfig.java:SecurityConfig",
+      "type": "class",
+      "name": "SecurityConfig",
+      "filePath": "gateway-service/src/main/java/com/genai/retail/gateway/config/SecurityConfig.java",
+      "summary": "Spring Security configuration for the gateway.",
+      "tags": [
+        "config",
+        "security",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:gateway-service/src/main/java/com/genai/retail/gateway/config/RouteConfig.java",
+      "type": "file",
+      "name": "RouteConfig.java",
+      "filePath": "gateway-service/src/main/java/com/genai/retail/gateway/config/RouteConfig.java",
+      "summary": "Routing configuration for the Gateway, mapping paths to microservices.",
+      "tags": [
+        "config",
+        "routing",
+        "gateway",
+        "java"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:gateway-service/src/main/java/com/genai/retail/gateway/config/RouteConfig.java:RouteConfig",
+      "type": "class",
+      "name": "RouteConfig",
+      "filePath": "gateway-service/src/main/java/com/genai/retail/gateway/config/RouteConfig.java",
+      "summary": "Configuration class for API Gateway routes.",
+      "tags": [
+        "config",
+        "routing",
+        "java"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:gateway-service/src/main/java/com/genai/retail/gateway/GatewayServiceApplication.java",
+      "type": "file",
+      "name": "GatewayServiceApplication.java",
+      "filePath": "gateway-service/src/main/java/com/genai/retail/gateway/GatewayServiceApplication.java",
+      "summary": "Main entry point for the Gateway Service Spring Boot application.",
+      "tags": [
+        "springboot",
+        "gateway",
+        "entrypoint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:gateway-service/src/main/java/com/genai/retail/gateway/GatewayServiceApplication.java:GatewayServiceApplication",
+      "type": "class",
+      "name": "GatewayServiceApplication",
+      "filePath": "gateway-service/src/main/java/com/genai/retail/gateway/GatewayServiceApplication.java",
+      "summary": "Main class for Gateway Service.",
+      "tags": [
+        "class",
+        "springboot"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:gateway-service/src/main/java/com/genai/retail/gateway/filter/JwtAuthenticationFilter.java",
+      "type": "file",
+      "name": "JwtAuthenticationFilter.java",
+      "filePath": "gateway-service/src/main/java/com/genai/retail/gateway/filter/JwtAuthenticationFilter.java",
+      "summary": "Custom Spring Cloud Gateway filter for JWT authentication. Validates tokens for protected paths.",
+      "tags": [
+        "springboot",
+        "security",
+        "jwt",
+        "filter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:gateway-service/src/main/java/com/genai/retail/gateway/filter/JwtAuthenticationFilter.java:JwtAuthenticationFilter",
+      "type": "class",
+      "name": "JwtAuthenticationFilter",
+      "filePath": "gateway-service/src/main/java/com/genai/retail/gateway/filter/JwtAuthenticationFilter.java",
+      "summary": "Filter class implementing JWT validation logic.",
+      "tags": [
+        "class",
+        "filter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:agents/opentelemetry-javaagent.jar",
+      "type": "file",
+      "name": "opentelemetry-javaagent.jar",
+      "filePath": "agents/opentelemetry-javaagent.jar",
+      "summary": "OpenTelemetry Java agent for auto-instrumentation.",
+      "tags": [
+        "opentelemetry",
+        "tracing",
+        "java-agent"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Project overview and documentation.",
+      "tags": [
+        "documentation",
+        "readme"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:otel-collector-config.yaml",
+      "type": "config",
+      "name": "otel-collector-config.yaml",
+      "filePath": "otel-collector-config.yaml",
+      "summary": "Configuration for the OpenTelemetry Collector.",
+      "tags": [
+        "opentelemetry",
+        "configuration",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:otel-collector-config.yaml:otlp",
+      "type": "service",
+      "name": "otlp",
+      "filePath": "otel-collector-config.yaml",
+      "summary": "OTLP receiver service configuration.",
+      "tags": [
+        "service",
+        "otlp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "pipeline:otel-collector-config.yaml:traces",
+      "type": "pipeline",
+      "name": "traces",
+      "filePath": "otel-collector-config.yaml",
+      "summary": "OTEL traces pipeline configuration.",
+      "tags": [
+        "pipeline",
+        "traces"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:init-db.sql",
+      "type": "file",
+      "name": "init-db.sql",
+      "filePath": "init-db.sql",
+      "summary": "SQL initialization script for creating databases.",
+      "tags": [
+        "sql",
+        "database",
+        "initialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:auth-service/Dockerfile",
+      "type": "service",
+      "name": "Auth Service Dockerfile",
+      "filePath": "auth-service/Dockerfile",
+      "summary": "Dockerfile for the Auth Service container image.",
+      "tags": [
+        "docker",
+        "infrastructure",
+        "auth-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:auth-service/pom.xml",
+      "type": "config",
+      "name": "pom.xml (auth-service)",
+      "filePath": "auth-service/pom.xml",
+      "summary": "Maven configuration for the Auth Service.",
+      "tags": [
+        "maven",
+        "configuration",
+        "dependencies"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:auth-service/src/main/resources/application.yaml",
+      "type": "config",
+      "name": "application.yaml (auth-service)",
+      "filePath": "auth-service/src/main/resources/application.yaml",
+      "summary": "Application configuration for the Auth Service.",
+      "tags": [
+        "yaml",
+        "configuration",
+        "springboot"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:auth-service/src/main/java/com/genai/retail/auth/dto/RegisterRequest.java",
+      "type": "file",
+      "name": "RegisterRequest.java",
+      "filePath": "auth-service/src/main/java/com/genai/retail/auth/dto/RegisterRequest.java",
+      "summary": "DTO for user registration request.",
+      "tags": [
+        "dto",
+        "java",
+        "auth"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:auth-service/src/main/java/com/genai/retail/auth/dto/AuthResponse.java",
+      "type": "file",
+      "name": "AuthResponse.java",
+      "filePath": "auth-service/src/main/java/com/genai/retail/auth/dto/AuthResponse.java",
+      "summary": "DTO for authentication response.",
+      "tags": [
+        "dto",
+        "java",
+        "auth"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:auth-service/src/main/java/com/genai/retail/auth/dto/LoginRequest.java",
+      "type": "file",
+      "name": "LoginRequest.java",
+      "filePath": "auth-service/src/main/java/com/genai/retail/auth/dto/LoginRequest.java",
+      "summary": "DTO for user login request.",
+      "tags": [
+        "dto",
+        "java",
+        "auth"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:auth-service/src/main/java/com/genai/retail/auth/repository/UserRepository.java",
+      "type": "file",
+      "name": "UserRepository.java",
+      "filePath": "auth-service/src/main/java/com/genai/retail/auth/repository/UserRepository.java",
+      "summary": "Spring Data JPA repository for User entity.",
+      "tags": [
+        "repository",
+        "jpa",
+        "persistence"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:auth-service/src/main/java/com/genai/retail/auth/AuthServiceApplication.java",
+      "type": "file",
+      "name": "AuthServiceApplication.java",
+      "filePath": "auth-service/src/main/java/com/genai/retail/auth/AuthServiceApplication.java",
+      "summary": "Main entry point for the Auth Service.",
+      "tags": [
+        "springboot",
+        "auth",
+        "entrypoint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:auth-service/src/main/java/com/genai/retail/auth/util/JwtUtil.java",
+      "type": "file",
+      "name": "JwtUtil.java",
+      "filePath": "auth-service/src/main/java/com/genai/retail/auth/util/JwtUtil.java",
+      "summary": "Utility class for JWT token generation and validation.",
+      "tags": [
+        "jwt",
+        "security",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:auth-service/src/main/java/com/genai/retail/auth/config/TracingConfig.java",
+      "type": "file",
+      "name": "TracingConfig.java",
+      "filePath": "auth-service/src/main/java/com/genai/retail/auth/config/TracingConfig.java",
+      "summary": "Configuration for MDC-based tracing context propagation.",
+      "tags": [
+        "config",
+        "springboot",
+        "tracing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:auth-service/src/main/java/com/genai/retail/auth/config/SecurityConfig.java",
+      "type": "file",
+      "name": "SecurityConfig.java",
+      "filePath": "auth-service/src/main/java/com/genai/retail/auth/config/SecurityConfig.java",
+      "summary": "Security configuration for the Auth Service.",
+      "tags": [
+        "config",
+        "springboot",
+        "security"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:auth-service/src/main/java/com/genai/retail/auth/config/OpenApiConfig.java",
+      "type": "file",
+      "name": "OpenApiConfig.java",
+      "filePath": "auth-service/src/main/java/com/genai/retail/auth/config/OpenApiConfig.java",
+      "summary": "Configuration for OpenAPI/Swagger documentation.",
+      "tags": [
+        "config",
+        "springboot",
+        "swagger"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:auth-service/src/main/java/com/genai/retail/auth/config/PasswordConfig.java",
+      "type": "file",
+      "name": "PasswordConfig.java",
+      "filePath": "auth-service/src/main/java/com/genai/retail/auth/config/PasswordConfig.java",
+      "summary": "Configuration for password encoding.",
+      "tags": [
+        "config",
+        "springboot",
+        "security"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:auth-service/src/main/java/com/genai/retail/auth/entity/User.java",
+      "type": "file",
+      "name": "User.java",
+      "filePath": "auth-service/src/main/java/com/genai/retail/auth/entity/User.java",
+      "summary": "JPA entity representing a User.",
+      "tags": [
+        "entity",
+        "jpa",
+        "user"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:auth-service/src/main/java/com/genai/retail/auth/controller/AuthController.java",
+      "type": "file",
+      "name": "AuthController.java",
+      "filePath": "auth-service/src/main/java/com/genai/retail/auth/controller/AuthController.java",
+      "summary": "REST controller for authentication endpoints.",
+      "tags": [
+        "controller",
+        "rest",
+        "auth"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java",
+      "type": "file",
+      "name": "AuthService.java",
+      "filePath": "auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java",
+      "summary": "Service layer for authentication logic (register, login).",
+      "tags": [
+        "service",
+        "auth",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java:register",
+      "type": "function",
+      "name": "register",
+      "filePath": "auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java",
+      "summary": "Registers a new user and returns an auth token.",
+      "tags": [
+        "function",
+        "auth"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java:login",
+      "type": "function",
+      "name": "login",
+      "filePath": "auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java",
+      "summary": "Authenticates a user and returns an auth token.",
+      "tags": [
+        "function",
+        "auth"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:auth-service/src/main/java/com/genai/retail/auth/exception/GlobalExceptionHandler.java",
+      "type": "file",
+      "name": "GlobalExceptionHandler.java",
+      "filePath": "auth-service/src/main/java/com/genai/retail/auth/exception/GlobalExceptionHandler.java",
+      "summary": "Global exception handler for REST controllers.",
+      "tags": [
+        "exception-handler",
+        "springboot",
+        "rest"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "service:product-service/Dockerfile",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/ProductServiceApplication.java",
+      "type": "deploys",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "config:product-service/pom.xml",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/ProductServiceApplication.java",
+      "type": "configures",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "config:product-service/src/main/resources/application.yaml",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/ProductServiceApplication.java",
+      "type": "configures",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "class:product-service/src/main/java/com/genai/retail/product/repository/ProductRepository.java:ProductRepository",
+      "target": "class:product-service/src/main/java/com/genai/retail/product/entity/Product.java:Product",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "class:product-service/src/main/java/com/genai/retail/product/mapper/ProductMapper.java:ProductMapper",
+      "target": "class:product-service/src/main/java/com/genai/retail/product/dto/ProductRequest.java:ProductRequest",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "class:product-service/src/main/java/com/genai/retail/product/mapper/ProductMapper.java:ProductMapper",
+      "target": "class:product-service/src/main/java/com/genai/retail/product/dto/ProductResponse.java:ProductResponse",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "class:product-service/src/main/java/com/genai/retail/product/mapper/ProductMapper.java:ProductMapper",
+      "target": "class:product-service/src/main/java/com/genai/retail/product/entity/Product.java:Product",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "class:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java:ProductController",
+      "target": "class:product-service/src/main/java/com/genai/retail/product/service/ProductService.java:ProductService",
+      "type": "calls",
+      "weight": 0.8,
+      "direction": "forward"
+    },
+    {
+      "source": "class:product-service/src/main/java/com/genai/retail/product/service/ProductService.java:ProductService",
+      "target": "class:product-service/src/main/java/com/genai/retail/product/repository/ProductRepository.java:ProductRepository",
+      "type": "calls",
+      "weight": 0.8,
+      "direction": "forward"
+    },
+    {
+      "source": "class:product-service/src/main/java/com/genai/retail/product/service/ProductService.java:ProductService",
+      "target": "class:product-service/src/main/java/com/genai/retail/product/mapper/ProductMapper.java:ProductMapper",
+      "type": "calls",
+      "weight": 0.8,
+      "direction": "forward"
+    },
+    {
+      "source": "class:product-service/src/main/java/com/genai/retail/product/service/ProductService.java:ProductService",
+      "target": "class:product-service/src/main/java/com/genai/retail/product/exception/ProductNotFoundException.java:ProductNotFoundException",
+      "type": "calls",
+      "weight": 0.8,
+      "direction": "forward"
+    },
+    {
+      "source": "config:docker-compose.yaml",
+      "target": "service:product-service/Dockerfile",
+      "type": "depends_on",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "config:docker-compose.yaml",
+      "target": "service:gateway-service/Dockerfile",
+      "type": "depends_on",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "class:gateway-service/src/main/java/com/genai/retail/gateway/config/RouteConfig.java:RouteConfig",
+      "target": "service:product-service/Dockerfile",
+      "type": "routes",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "file:gateway-service/src/main/java/com/genai/retail/gateway/GatewayServiceApplication.java",
+      "target": "class:gateway-service/src/main/java/com/genai/retail/gateway/GatewayServiceApplication.java:GatewayServiceApplication",
+      "type": "contains",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:gateway-service/src/main/java/com/genai/retail/gateway/filter/JwtAuthenticationFilter.java",
+      "target": "class:gateway-service/src/main/java/com/genai/retail/gateway/filter/JwtAuthenticationFilter.java:JwtAuthenticationFilter",
+      "type": "contains",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:gateway-service/src/main/java/com/genai/retail/gateway/filter/JwtAuthenticationFilter.java",
+      "target": "file:gateway-service/src/main/java/com/genai/retail/gateway/util/JwtUtil.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "config:otel-collector-config.yaml",
+      "target": "service:otel-collector-config.yaml:otlp",
+      "type": "contains",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "config:otel-collector-config.yaml",
+      "target": "pipeline:otel-collector-config.yaml:traces",
+      "type": "contains",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "service:auth-service/Dockerfile",
+      "target": "file:agents/opentelemetry-javaagent.jar",
+      "type": "depends_on",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "config:auth-service/src/main/resources/application.yaml",
+      "target": "file:auth-service/src/main/java/com/genai/retail/auth/AuthServiceApplication.java",
+      "type": "configures",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "file:auth-service/src/main/java/com/genai/retail/auth/repository/UserRepository.java",
+      "target": "file:auth-service/src/main/java/com/genai/retail/auth/entity/User.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:auth-service/src/main/java/com/genai/retail/auth/controller/AuthController.java",
+      "target": "file:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:auth-service/src/main/java/com/genai/retail/auth/controller/AuthController.java",
+      "target": "function:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java:register",
+      "type": "calls",
+      "weight": 0.8,
+      "direction": "forward"
+    },
+    {
+      "source": "file:auth-service/src/main/java/com/genai/retail/auth/controller/AuthController.java",
+      "target": "function:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java:login",
+      "type": "calls",
+      "weight": 0.8,
+      "direction": "forward"
+    },
+    {
+      "source": "file:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java",
+      "target": "file:auth-service/src/main/java/com/genai/retail/auth/repository/UserRepository.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java",
+      "target": "file:auth-service/src/main/java/com/genai/retail/auth/util/JwtUtil.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java",
+      "target": "function:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java:register",
+      "type": "contains",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java",
+      "target": "function:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java:login",
+      "type": "contains",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "config:auth-service/pom.xml",
+      "target": "file:auth-service/src/main/java/com/genai/retail/auth/AuthServiceApplication.java",
+      "type": "configures",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "file:product-service/src/main/java/com/genai/retail/product/repository/ProductRepository.java",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/entity/Product.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:product-service/src/main/java/com/genai/retail/product/mapper/ProductMapper.java",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/dto/ProductRequest.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:product-service/src/main/java/com/genai/retail/product/mapper/ProductMapper.java",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/dto/ProductResponse.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:product-service/src/main/java/com/genai/retail/product/mapper/ProductMapper.java",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/entity/Product.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/dto/ProductPageResponse.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/dto/ProductRequest.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/dto/ProductResponse.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/service/ProductService.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:product-service/src/main/java/com/genai/retail/product/service/ProductService.java",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/dto/ProductPageResponse.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:product-service/src/main/java/com/genai/retail/product/service/ProductService.java",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/dto/ProductRequest.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:product-service/src/main/java/com/genai/retail/product/service/ProductService.java",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/dto/ProductResponse.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:product-service/src/main/java/com/genai/retail/product/service/ProductService.java",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/entity/Product.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:product-service/src/main/java/com/genai/retail/product/service/ProductService.java",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/exception/ProductNotFoundException.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:product-service/src/main/java/com/genai/retail/product/service/ProductService.java",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/mapper/ProductMapper.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:product-service/src/main/java/com/genai/retail/product/service/ProductService.java",
+      "target": "file:product-service/src/main/java/com/genai/retail/product/repository/ProductRepository.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:auth-service/src/main/java/com/genai/retail/auth/controller/AuthController.java",
+      "target": "file:auth-service/src/main/java/com/genai/retail/auth/dto/AuthResponse.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:auth-service/src/main/java/com/genai/retail/auth/controller/AuthController.java",
+      "target": "file:auth-service/src/main/java/com/genai/retail/auth/dto/LoginRequest.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:auth-service/src/main/java/com/genai/retail/auth/controller/AuthController.java",
+      "target": "file:auth-service/src/main/java/com/genai/retail/auth/dto/RegisterRequest.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java",
+      "target": "file:auth-service/src/main/java/com/genai/retail/auth/dto/AuthResponse.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java",
+      "target": "file:auth-service/src/main/java/com/genai/retail/auth/dto/LoginRequest.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java",
+      "target": "file:auth-service/src/main/java/com/genai/retail/auth/dto/RegisterRequest.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java",
+      "target": "file:auth-service/src/main/java/com/genai/retail/auth/entity/User.java",
+      "type": "imports",
+      "weight": 0.7,
+      "direction": "forward"
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:infrastructure-and-orchestration",
+      "name": "Infrastructure & Orchestration",
+      "description": "Cross-cutting infrastructure, container orchestration, and system-wide documentation.",
+      "nodeIds": [
+        "config:docker-compose.yaml",
+        "config:otel-collector-config.yaml",
+        "service:otel-collector-config.yaml:otlp",
+        "pipeline:otel-collector-config.yaml:traces",
+        "file:agents/opentelemetry-javaagent.jar",
+        "document:README.md",
+        "file:init-db.sql"
+      ]
+    },
+    {
+      "id": "layer:edge-gateway",
+      "name": "Edge Gateway",
+      "description": "The entry point for all client requests, providing routing, security filtering (JWT), and cross-cutting concerns like tracing.",
+      "nodeIds": [
+        "service:gateway-service/Dockerfile",
+        "config:gateway-service/pom.xml",
+        "document:gateway-service/README.md",
+        "config:gateway-service/src/main/resources/application.yaml",
+        "file:gateway-service/src/main/java/com/genai/retail/gateway/GatewayServiceApplication.java",
+        "class:gateway-service/src/main/java/com/genai/retail/gateway/GatewayServiceApplication.java:GatewayServiceApplication",
+        "file:gateway-service/src/main/java/com/genai/retail/gateway/config/RouteConfig.java",
+        "class:gateway-service/src/main/java/com/genai/retail/gateway/config/RouteConfig.java:RouteConfig",
+        "file:gateway-service/src/main/java/com/genai/retail/gateway/config/SecurityConfig.java",
+        "class:gateway-service/src/main/java/com/genai/retail/gateway/config/SecurityConfig.java:SecurityConfig",
+        "file:gateway-service/src/main/java/com/genai/retail/gateway/filter/JwtAuthenticationFilter.java",
+        "class:gateway-service/src/main/java/com/genai/retail/gateway/filter/JwtAuthenticationFilter.java:JwtAuthenticationFilter",
+        "file:gateway-service/src/main/java/com/genai/retail/gateway/util/JwtUtil.java",
+        "class:gateway-service/src/main/java/com/genai/retail/gateway/util/JwtUtil.java:JwtUtil"
+      ]
+    },
+    {
+      "id": "layer:authentication-service",
+      "name": "Authentication & Identity Service",
+      "description": "Microservice responsible for user registration, authentication, and JWT issuance.",
+      "nodeIds": [
+        "service:auth-service/Dockerfile",
+        "config:auth-service/pom.xml",
+        "config:auth-service/src/main/resources/application.yaml",
+        "file:auth-service/src/main/java/com/genai/retail/auth/AuthServiceApplication.java",
+        "file:auth-service/src/main/java/com/genai/retail/auth/controller/AuthController.java",
+        "file:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java",
+        "function:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java:register",
+        "function:auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java:login",
+        "file:auth-service/src/main/java/com/genai/retail/auth/repository/UserRepository.java",
+        "file:auth-service/src/main/java/com/genai/retail/auth/entity/User.java",
+        "file:auth-service/src/main/java/com/genai/retail/auth/dto/RegisterRequest.java",
+        "file:auth-service/src/main/java/com/genai/retail/auth/dto/LoginRequest.java",
+        "file:auth-service/src/main/java/com/genai/retail/auth/dto/AuthResponse.java",
+        "file:auth-service/src/main/java/com/genai/retail/auth/config/SecurityConfig.java",
+        "file:auth-service/src/main/java/com/genai/retail/auth/config/PasswordConfig.java",
+        "file:auth-service/src/main/java/com/genai/retail/auth/config/OpenApiConfig.java",
+        "file:auth-service/src/main/java/com/genai/retail/auth/config/TracingConfig.java",
+        "file:auth-service/src/main/java/com/genai/retail/auth/util/JwtUtil.java",
+        "file:auth-service/src/main/java/com/genai/retail/auth/exception/GlobalExceptionHandler.java"
+      ]
+    },
+    {
+      "id": "layer:product-service",
+      "name": "Product Management Service",
+      "description": "Microservice for managing product catalog, including search, categorization, and CRUD operations.",
+      "nodeIds": [
+        "service:product-service/Dockerfile",
+        "config:product-service/pom.xml",
+        "document:product-service/README.md",
+        "config:product-service/src/main/resources/application.yaml",
+        "file:product-service/src/main/java/com/genai/retail/product/ProductServiceApplication.java",
+        "class:product-service/src/main/java/com/genai/retail/product/ProductServiceApplication.java:ProductServiceApplication",
+        "file:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java",
+        "class:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java:ProductController",
+        "endpoint:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java:create",
+        "endpoint:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java:getAll",
+        "endpoint:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java:getById",
+        "endpoint:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java:getByCategory",
+        "endpoint:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java:searchProducts",
+        "file:product-service/src/main/java/com/genai/retail/product/service/ProductService.java",
+        "class:product-service/src/main/java/com/genai/retail/product/service/ProductService.java:ProductService",
+        "file:product-service/src/main/java/com/genai/retail/product/repository/ProductRepository.java",
+        "class:product-service/src/main/java/com/genai/retail/product/repository/ProductRepository.java:ProductRepository",
+        "file:product-service/src/main/java/com/genai/retail/product/entity/Product.java",
+        "class:product-service/src/main/java/com/genai/retail/product/entity/Product.java:Product",
+        "file:product-service/src/main/java/com/genai/retail/product/dto/ProductRequest.java",
+        "class:product-service/src/main/java/com/genai/retail/product/dto/ProductRequest.java:ProductRequest",
+        "file:product-service/src/main/java/com/genai/retail/product/dto/ProductResponse.java",
+        "class:product-service/src/main/java/com/genai/retail/product/dto/ProductResponse.java:ProductResponse",
+        "file:product-service/src/main/java/com/genai/retail/product/dto/ProductPageResponse.java",
+        "class:product-service/src/main/java/com/genai/retail/product/dto/ProductPageResponse.java:ProductPageResponse",
+        "file:product-service/src/main/java/com/genai/retail/product/mapper/ProductMapper.java",
+        "class:product-service/src/main/java/com/genai/retail/product/mapper/ProductMapper.java:ProductMapper",
+        "file:product-service/src/main/java/com/genai/retail/product/config/SwaggerConfig.java",
+        "class:product-service/src/main/java/com/genai/retail/product/config/SwaggerConfig.java:SwaggerConfig",
+        "function:product-service/src/main/java/com/genai/retail/product/config/SwaggerConfig.java:customOpenAPI",
+        "file:product-service/src/main/java/com/genai/retail/product/exception/ProductNotFoundException.java",
+        "class:product-service/src/main/java/com/genai/retail/product/exception/ProductNotFoundException.java:ProductNotFoundException",
+        "file:product-service/src/main/java/com/genai/retail/product/exception/GlobalExceptionHandler.java",
+        "class:product-service/src/main/java/com/genai/retail/product/exception/GlobalExceptionHandler.java:GlobalExceptionHandler"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Project Overview & Orchestration",
+      "description": "Welcome to the GenAI Retail Platform. This project is a microservices-based retail system. The docker-compose.yaml file orchestrates the entire system, including databases, observability tools, and the microservices themselves.",
+      "nodeIds": [
+        "document:README.md",
+        "config:docker-compose.yaml"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Edge Gateway: The Entry Point",
+      "description": "The Gateway Service is the single entry point for all external traffic. GatewayServiceApplication boots the Spring Cloud Gateway, while RouteConfig defines how requests are routed to the underlying microservices like Auth and Product services.",
+      "nodeIds": [
+        "file:gateway-service/src/main/java/com/genai/retail/gateway/GatewayServiceApplication.java",
+        "file:gateway-service/src/main/java/com/genai/retail/gateway/config/RouteConfig.java"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Security & Identity Management",
+      "description": "Authentication is handled by the Auth Service. Users can register and login via AuthController. The Gateway enforces security using JwtAuthenticationFilter, which validates JWT tokens issued by the Auth Service before allowing requests to proceed.",
+      "nodeIds": [
+        "file:auth-service/src/main/java/com/genai/retail/auth/controller/AuthController.java",
+        "file:gateway-service/src/main/java/com/genai/retail/gateway/filter/JwtAuthenticationFilter.java"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Product Catalog Service",
+      "description": "The Product Service manages the core retail data. ProductController exposes REST endpoints for CRUD operations and search. ProductService contains the business logic, while ProductRepository handles persistence to the PostgreSQL database.",
+      "nodeIds": [
+        "file:product-service/src/main/java/com/genai/retail/product/controller/ProductController.java",
+        "file:product-service/src/main/java/com/genai/retail/product/service/ProductService.java",
+        "file:product-service/src/main/java/com/genai/retail/product/repository/ProductRepository.java"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "Observability & Distributed Tracing",
+      "description": "Distributed tracing is integrated throughout the platform using OpenTelemetry. otel-collector-config.yaml configures the trace collection pipeline, and services use custom tracing configurations to ensure context propagation across microservice boundaries.",
+      "nodeIds": [
+        "config:otel-collector-config.yaml",
+        "file:auth-service/src/main/java/com/genai/retail/auth/config/TracingConfig.java"
+      ]
+    }
+  ]
+}

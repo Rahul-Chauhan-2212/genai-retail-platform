@@ -1,0 +1,2454 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "4c4ebf8c53445db0a00a93a1b4599bd88b9471a3",
+  "generatedAt": "2026-05-21T07:54:41.360Z",
+  "files": {
+    "./product-service/Dockerfile": {
+      "filePath": "./product-service/Dockerfile",
+      "contentHash": "febf182f231dc7dbbca0a623ae9737db07446bf73c56c4b57f3feb13629f55fe",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    "./product-service/pom.xml": {
+      "filePath": "./product-service/pom.xml",
+      "contentHash": "2691f62854da0b18a988b119eadbb80fe2c7798c83f5c37a4556073c0b54fcc5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 72,
+      "hasStructuralAnalysis": false
+    },
+    "./product-service/README.md": {
+      "filePath": "./product-service/README.md",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "./product-service/src/main/resources/application.yaml": {
+      "filePath": "./product-service/src/main/resources/application.yaml",
+      "contentHash": "57bfb7b9bf026b65f1acb4e82bb7e093f937b30a0d82069e9104f9480bb0415c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 43,
+      "hasStructuralAnalysis": true
+    },
+    "./product-service/src/main/java/com/genai/retail/product/dto/ProductRequest.java": {
+      "filePath": "./product-service/src/main/java/com/genai/retail/product/dto/ProductRequest.java",
+      "contentHash": "40046b4d4173fb04c637de4b3c97587e4096e32a43d69149803b01730d937943",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ProductRequest",
+          "methods": [],
+          "properties": [
+            "name",
+            "category",
+            "description",
+            "brand",
+            "price",
+            "imageUrl",
+            "targetAudience",
+            "season"
+          ],
+          "exported": true,
+          "lineCount": 20
+        }
+      ],
+      "imports": [
+        {
+          "source": "jakarta.validation.constraints.NotBlank",
+          "specifiers": [
+            "NotBlank"
+          ]
+        },
+        {
+          "source": "java.math.BigDecimal",
+          "specifiers": [
+            "BigDecimal"
+          ]
+        },
+        {
+          "source": "lombok.Data",
+          "specifiers": [
+            "Data"
+          ]
+        }
+      ],
+      "exports": [
+        "ProductRequest"
+      ],
+      "totalLines": 26,
+      "hasStructuralAnalysis": true
+    },
+    "./product-service/src/main/java/com/genai/retail/product/dto/ProductPageResponse.java": {
+      "filePath": "./product-service/src/main/java/com/genai/retail/product/dto/ProductPageResponse.java",
+      "contentHash": "9afa17e59d7bc42b0f85d3652fcc266235e6dba306a9ddc8641c42b2ca46c65b",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ProductPageResponse",
+          "methods": [],
+          "properties": [
+            "content",
+            "page",
+            "size",
+            "totalElements",
+            "totalPages",
+            "last"
+          ],
+          "exported": true,
+          "lineCount": 16
+        }
+      ],
+      "imports": [
+        {
+          "source": "lombok.Builder",
+          "specifiers": [
+            "Builder"
+          ]
+        },
+        {
+          "source": "lombok.Data",
+          "specifiers": [
+            "Data"
+          ]
+        },
+        {
+          "source": "java.util.List",
+          "specifiers": [
+            "List"
+          ]
+        }
+      ],
+      "exports": [
+        "ProductPageResponse"
+      ],
+      "totalLines": 23,
+      "hasStructuralAnalysis": true
+    },
+    "./product-service/src/main/java/com/genai/retail/product/dto/ProductResponse.java": {
+      "filePath": "./product-service/src/main/java/com/genai/retail/product/dto/ProductResponse.java",
+      "contentHash": "d9552b06626f691aedd710e5896234d0e983876bf6e4d75aa1e7462b2d8d2832",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ProductResponse",
+          "methods": [],
+          "properties": [
+            "id",
+            "name",
+            "category",
+            "description",
+            "brand",
+            "price",
+            "imageUrl",
+            "targetAudience",
+            "season"
+          ],
+          "exported": true,
+          "lineCount": 22
+        }
+      ],
+      "imports": [
+        {
+          "source": "java.math.BigDecimal",
+          "specifiers": [
+            "BigDecimal"
+          ]
+        },
+        {
+          "source": "lombok.Builder",
+          "specifiers": [
+            "Builder"
+          ]
+        },
+        {
+          "source": "lombok.Data",
+          "specifiers": [
+            "Data"
+          ]
+        }
+      ],
+      "exports": [
+        "ProductResponse"
+      ],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "./product-service/src/main/java/com/genai/retail/product/repository/ProductRepository.java": {
+      "filePath": "./product-service/src/main/java/com/genai/retail/product/repository/ProductRepository.java",
+      "contentHash": "6384058460b63b27440b54fd83cfe71f8a159ac8bb1e82e09f5c33cf9b4c5c44",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ProductRepository",
+          "methods": [
+            "findByCategory",
+            "findByBrand",
+            "findByNameContainingIgnoreCase"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 11
+        }
+      ],
+      "imports": [
+        {
+          "source": "com.genai.retail.product.entity.Product",
+          "specifiers": [
+            "Product"
+          ]
+        },
+        {
+          "source": "org.springframework.data.domain.Page",
+          "specifiers": [
+            "Page"
+          ]
+        },
+        {
+          "source": "org.springframework.data.domain.Pageable",
+          "specifiers": [
+            "Pageable"
+          ]
+        },
+        {
+          "source": "org.springframework.data.jpa.repository.JpaRepository",
+          "specifiers": [
+            "JpaRepository"
+          ]
+        }
+      ],
+      "exports": [
+        "ProductRepository"
+      ],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "./product-service/src/main/java/com/genai/retail/product/config/SwaggerConfig.java": {
+      "filePath": "./product-service/src/main/java/com/genai/retail/product/config/SwaggerConfig.java",
+      "contentHash": "1e57720c7da0d12b0c8878460ede6b149db25c0106818ca2d32a434fa51d39ea",
+      "functions": [
+        {
+          "name": "customOpenAPI",
+          "params": [],
+          "returnType": "OpenAPI",
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "classes": [
+        {
+          "name": "SwaggerConfig",
+          "methods": [
+            "customOpenAPI"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 17
+        }
+      ],
+      "imports": [
+        {
+          "source": "io.swagger.v3.oas.models.OpenAPI",
+          "specifiers": [
+            "OpenAPI"
+          ]
+        },
+        {
+          "source": "io.swagger.v3.oas.models.info.Info",
+          "specifiers": [
+            "Info"
+          ]
+        },
+        {
+          "source": "org.springframework.context.annotation.Bean",
+          "specifiers": [
+            "Bean"
+          ]
+        },
+        {
+          "source": "org.springframework.context.annotation.Configuration",
+          "specifiers": [
+            "Configuration"
+          ]
+        }
+      ],
+      "exports": [
+        "customOpenAPI",
+        "SwaggerConfig"
+      ],
+      "totalLines": 24,
+      "hasStructuralAnalysis": true
+    },
+    "./product-service/src/main/java/com/genai/retail/product/entity/Product.java": {
+      "filePath": "./product-service/src/main/java/com/genai/retail/product/entity/Product.java",
+      "contentHash": "00b8a508edf1fdb4bcf4dae2a4d4fabaccbc0cba108e7709cfb7361cbf1c5568",
+      "functions": [],
+      "classes": [
+        {
+          "name": "Product",
+          "methods": [],
+          "properties": [
+            "id",
+            "name",
+            "category",
+            "description",
+            "brand",
+            "price",
+            "imageUrl",
+            "targetAudience",
+            "season",
+            "active",
+            "createdAt",
+            "updatedAt"
+          ],
+          "exported": true,
+          "lineCount": 37
+        }
+      ],
+      "imports": [
+        {
+          "source": "jakarta.persistence.Column",
+          "specifiers": [
+            "Column"
+          ]
+        },
+        {
+          "source": "jakarta.persistence.Entity",
+          "specifiers": [
+            "Entity"
+          ]
+        },
+        {
+          "source": "jakarta.persistence.GeneratedValue",
+          "specifiers": [
+            "GeneratedValue"
+          ]
+        },
+        {
+          "source": "jakarta.persistence.GenerationType",
+          "specifiers": [
+            "GenerationType"
+          ]
+        },
+        {
+          "source": "jakarta.persistence.Id",
+          "specifiers": [
+            "Id"
+          ]
+        },
+        {
+          "source": "jakarta.persistence.Table",
+          "specifiers": [
+            "Table"
+          ]
+        },
+        {
+          "source": "java.math.BigDecimal",
+          "specifiers": [
+            "BigDecimal"
+          ]
+        },
+        {
+          "source": "java.time.LocalDateTime",
+          "specifiers": [
+            "LocalDateTime"
+          ]
+        },
+        {
+          "source": "lombok.AllArgsConstructor",
+          "specifiers": [
+            "AllArgsConstructor"
+          ]
+        },
+        {
+          "source": "lombok.Builder",
+          "specifiers": [
+            "Builder"
+          ]
+        },
+        {
+          "source": "lombok.Getter",
+          "specifiers": [
+            "Getter"
+          ]
+        },
+        {
+          "source": "lombok.NoArgsConstructor",
+          "specifiers": [
+            "NoArgsConstructor"
+          ]
+        },
+        {
+          "source": "lombok.Setter",
+          "specifiers": [
+            "Setter"
+          ]
+        }
+      ],
+      "exports": [
+        "Product"
+      ],
+      "totalLines": 53,
+      "hasStructuralAnalysis": true
+    },
+    "./product-service/src/main/java/com/genai/retail/product/mapper/ProductMapper.java": {
+      "filePath": "./product-service/src/main/java/com/genai/retail/product/mapper/ProductMapper.java",
+      "contentHash": "b6763089dc22c6f79947cbc0fcc1df10dfcb6fec131c486d6ef44a69b7a79608",
+      "functions": [
+        {
+          "name": "ProductMapper",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "toEntity",
+          "params": [
+            "request"
+          ],
+          "returnType": "Product",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "toResponse",
+          "params": [
+            "product"
+          ],
+          "returnType": "ProductResponse",
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "classes": [
+        {
+          "name": "ProductMapper",
+          "methods": [
+            "ProductMapper",
+            "toEntity",
+            "toResponse"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 37
+        }
+      ],
+      "imports": [
+        {
+          "source": "com.genai.retail.product.dto.ProductRequest",
+          "specifiers": [
+            "ProductRequest"
+          ]
+        },
+        {
+          "source": "com.genai.retail.product.dto.ProductResponse",
+          "specifiers": [
+            "ProductResponse"
+          ]
+        },
+        {
+          "source": "com.genai.retail.product.entity.Product",
+          "specifiers": [
+            "Product"
+          ]
+        },
+        {
+          "source": "java.time.LocalDateTime",
+          "specifiers": [
+            "LocalDateTime"
+          ]
+        }
+      ],
+      "exports": [
+        "toEntity",
+        "toResponse",
+        "ProductMapper"
+      ],
+      "totalLines": 45,
+      "hasStructuralAnalysis": true
+    },
+    "./product-service/src/main/java/com/genai/retail/product/controller/ProductController.java": {
+      "filePath": "./product-service/src/main/java/com/genai/retail/product/controller/ProductController.java",
+      "contentHash": "18ddafbd0b817dd0d95e22bf2c93877df012d5d4dbc2e6a001c0f7962bde058b",
+      "functions": [
+        {
+          "name": "create",
+          "params": [
+            "request"
+          ],
+          "returnType": "ProductResponse",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "getAll",
+          "params": [
+            "page",
+            "size"
+          ],
+          "returnType": "ProductPageResponse",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "getById",
+          "params": [
+            "id"
+          ],
+          "returnType": "ProductResponse",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "getByCategory",
+          "params": [
+            "category",
+            "page",
+            "size"
+          ],
+          "returnType": "ProductPageResponse",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "searchProducts",
+          "params": [
+            "keyword",
+            "page",
+            "size"
+          ],
+          "returnType": "ProductPageResponse",
+          "exported": true,
+          "lineCount": 19
+        }
+      ],
+      "classes": [
+        {
+          "name": "ProductController",
+          "methods": [
+            "create",
+            "getAll",
+            "getById",
+            "getByCategory",
+            "searchProducts"
+          ],
+          "properties": [
+            "productService"
+          ],
+          "exported": true,
+          "lineCount": 91
+        }
+      ],
+      "imports": [
+        {
+          "source": "com.genai.retail.product.dto.ProductPageResponse",
+          "specifiers": [
+            "ProductPageResponse"
+          ]
+        },
+        {
+          "source": "com.genai.retail.product.dto.ProductRequest",
+          "specifiers": [
+            "ProductRequest"
+          ]
+        },
+        {
+          "source": "com.genai.retail.product.dto.ProductResponse",
+          "specifiers": [
+            "ProductResponse"
+          ]
+        },
+        {
+          "source": "com.genai.retail.product.service.ProductService",
+          "specifiers": [
+            "ProductService"
+          ]
+        },
+        {
+          "source": "io.swagger.v3.oas.annotations.Operation",
+          "specifiers": [
+            "Operation"
+          ]
+        },
+        {
+          "source": "io.swagger.v3.oas.annotations.Parameter",
+          "specifiers": [
+            "Parameter"
+          ]
+        },
+        {
+          "source": "io.swagger.v3.oas.annotations.media.Content",
+          "specifiers": [
+            "Content"
+          ]
+        },
+        {
+          "source": "io.swagger.v3.oas.annotations.media.Schema",
+          "specifiers": [
+            "Schema"
+          ]
+        },
+        {
+          "source": "io.swagger.v3.oas.annotations.responses.ApiResponse",
+          "specifiers": [
+            "ApiResponse"
+          ]
+        },
+        {
+          "source": "io.swagger.v3.oas.annotations.responses.ApiResponses",
+          "specifiers": [
+            "ApiResponses"
+          ]
+        },
+        {
+          "source": "io.swagger.v3.oas.annotations.tags.Tag",
+          "specifiers": [
+            "Tag"
+          ]
+        },
+        {
+          "source": "jakarta.validation.Valid",
+          "specifiers": [
+            "Valid"
+          ]
+        },
+        {
+          "source": "lombok.RequiredArgsConstructor",
+          "specifiers": [
+            "RequiredArgsConstructor"
+          ]
+        },
+        {
+          "source": "org.springframework.web.bind.annotation.GetMapping",
+          "specifiers": [
+            "GetMapping"
+          ]
+        },
+        {
+          "source": "org.springframework.web.bind.annotation.PathVariable",
+          "specifiers": [
+            "PathVariable"
+          ]
+        },
+        {
+          "source": "org.springframework.web.bind.annotation.PostMapping",
+          "specifiers": [
+            "PostMapping"
+          ]
+        },
+        {
+          "source": "org.springframework.web.bind.annotation.RequestBody",
+          "specifiers": [
+            "RequestBody"
+          ]
+        },
+        {
+          "source": "org.springframework.web.bind.annotation.RequestMapping",
+          "specifiers": [
+            "RequestMapping"
+          ]
+        },
+        {
+          "source": "org.springframework.web.bind.annotation.RequestParam",
+          "specifiers": [
+            "RequestParam"
+          ]
+        },
+        {
+          "source": "org.springframework.web.bind.annotation.RestController",
+          "specifiers": [
+            "RestController"
+          ]
+        }
+      ],
+      "exports": [
+        "create",
+        "getAll",
+        "getById",
+        "getByCategory",
+        "searchProducts",
+        "ProductController"
+      ],
+      "totalLines": 115,
+      "hasStructuralAnalysis": true
+    },
+    "./product-service/src/main/java/com/genai/retail/product/ProductServiceApplication.java": {
+      "filePath": "./product-service/src/main/java/com/genai/retail/product/ProductServiceApplication.java",
+      "contentHash": "e15b8197bc533197c5be57c66e2c1934c8f479b1c60ec1f79c54c686fd90677d",
+      "functions": [
+        {
+          "name": "main",
+          "params": [
+            "args"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 3
+        }
+      ],
+      "classes": [
+        {
+          "name": "ProductServiceApplication",
+          "methods": [
+            "main"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "imports": [
+        {
+          "source": "org.springframework.boot.SpringApplication",
+          "specifiers": [
+            "SpringApplication"
+          ]
+        },
+        {
+          "source": "org.springframework.boot.autoconfigure.SpringBootApplication",
+          "specifiers": [
+            "SpringBootApplication"
+          ]
+        }
+      ],
+      "exports": [
+        "ProductServiceApplication"
+      ],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    },
+    "./product-service/src/main/java/com/genai/retail/product/service/ProductService.java": {
+      "filePath": "./product-service/src/main/java/com/genai/retail/product/service/ProductService.java",
+      "contentHash": "d4de946a1c924c19a3295469bdb07c3fa3bb61fe3aa77130570b810d3f89c55f",
+      "functions": [
+        {
+          "name": "createProduct",
+          "params": [
+            "request"
+          ],
+          "returnType": "ProductResponse",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "getAllProducts",
+          "params": [
+            "page",
+            "size"
+          ],
+          "returnType": "ProductPageResponse",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "getProduct",
+          "params": [
+            "id"
+          ],
+          "returnType": "ProductResponse",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "getByCategory",
+          "params": [
+            "category",
+            "page",
+            "size"
+          ],
+          "returnType": "ProductPageResponse",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "searchProducts",
+          "params": [
+            "keyword",
+            "page",
+            "size"
+          ],
+          "returnType": "ProductPageResponse",
+          "exported": true,
+          "lineCount": 21
+        }
+      ],
+      "classes": [
+        {
+          "name": "ProductService",
+          "methods": [
+            "createProduct",
+            "getAllProducts",
+            "getProduct",
+            "getByCategory",
+            "searchProducts"
+          ],
+          "properties": [
+            "repository"
+          ],
+          "exported": true,
+          "lineCount": 92
+        }
+      ],
+      "imports": [
+        {
+          "source": "com.genai.retail.product.dto.ProductPageResponse",
+          "specifiers": [
+            "ProductPageResponse"
+          ]
+        },
+        {
+          "source": "com.genai.retail.product.dto.ProductRequest",
+          "specifiers": [
+            "ProductRequest"
+          ]
+        },
+        {
+          "source": "com.genai.retail.product.dto.ProductResponse",
+          "specifiers": [
+            "ProductResponse"
+          ]
+        },
+        {
+          "source": "com.genai.retail.product.entity.Product",
+          "specifiers": [
+            "Product"
+          ]
+        },
+        {
+          "source": "com.genai.retail.product.exception.ProductNotFoundException",
+          "specifiers": [
+            "ProductNotFoundException"
+          ]
+        },
+        {
+          "source": "com.genai.retail.product.mapper.ProductMapper",
+          "specifiers": [
+            "ProductMapper"
+          ]
+        },
+        {
+          "source": "com.genai.retail.product.repository.ProductRepository",
+          "specifiers": [
+            "ProductRepository"
+          ]
+        },
+        {
+          "source": "java.util.List",
+          "specifiers": [
+            "List"
+          ]
+        },
+        {
+          "source": "lombok.RequiredArgsConstructor",
+          "specifiers": [
+            "RequiredArgsConstructor"
+          ]
+        },
+        {
+          "source": "lombok.extern.slf4j.Slf4j",
+          "specifiers": [
+            "Slf4j"
+          ]
+        },
+        {
+          "source": "org.springframework.data.domain.Page",
+          "specifiers": [
+            "Page"
+          ]
+        },
+        {
+          "source": "org.springframework.data.domain.PageRequest",
+          "specifiers": [
+            "PageRequest"
+          ]
+        },
+        {
+          "source": "org.springframework.data.domain.Pageable",
+          "specifiers": [
+            "Pageable"
+          ]
+        },
+        {
+          "source": "org.springframework.stereotype.Service",
+          "specifiers": [
+            "Service"
+          ]
+        }
+      ],
+      "exports": [
+        "createProduct",
+        "getAllProducts",
+        "getProduct",
+        "getByCategory",
+        "searchProducts",
+        "ProductService"
+      ],
+      "totalLines": 109,
+      "hasStructuralAnalysis": true
+    },
+    "./product-service/src/main/java/com/genai/retail/product/exception/ProductNotFoundException.java": {
+      "filePath": "./product-service/src/main/java/com/genai/retail/product/exception/ProductNotFoundException.java",
+      "contentHash": "2662c41ba0c1d06c915458b0690bdb762cd691b11f0a8b3857d2ea908a8fad13",
+      "functions": [
+        {
+          "name": "ProductNotFoundException",
+          "params": [
+            "message"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [
+        {
+          "name": "ProductNotFoundException",
+          "methods": [
+            "ProductNotFoundException"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "ProductNotFoundException",
+        "ProductNotFoundException"
+      ],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "./product-service/src/main/java/com/genai/retail/product/exception/GlobalExceptionHandler.java": {
+      "filePath": "./product-service/src/main/java/com/genai/retail/product/exception/GlobalExceptionHandler.java",
+      "contentHash": "0251856e1d875404b07abaf70181df288b1b81a63d9db9a389d152c9949c0be4",
+      "functions": [
+        {
+          "name": "handleProductNotFoundException",
+          "params": [
+            "ex",
+            "request"
+          ],
+          "returnType": "ResponseEntity<ErrorResponse>",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "handleValidationExceptions",
+          "params": [
+            "ex"
+          ],
+          "returnType": "ResponseEntity<Map<String, String>>",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "handleGlobalException",
+          "params": [
+            "ex",
+            "request"
+          ],
+          "returnType": "ResponseEntity<ErrorResponse>",
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "classes": [
+        {
+          "name": "GlobalExceptionHandler",
+          "methods": [
+            "handleProductNotFoundException",
+            "handleValidationExceptions",
+            "handleGlobalException"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 53
+        }
+      ],
+      "imports": [
+        {
+          "source": "java.time.LocalDateTime",
+          "specifiers": [
+            "LocalDateTime"
+          ]
+        },
+        {
+          "source": "java.util.HashMap",
+          "specifiers": [
+            "HashMap"
+          ]
+        },
+        {
+          "source": "java.util.Map",
+          "specifiers": [
+            "Map"
+          ]
+        },
+        {
+          "source": "lombok.extern.slf4j.Slf4j",
+          "specifiers": [
+            "Slf4j"
+          ]
+        },
+        {
+          "source": "org.springframework.http.HttpStatus",
+          "specifiers": [
+            "HttpStatus"
+          ]
+        },
+        {
+          "source": "org.springframework.http.ResponseEntity",
+          "specifiers": [
+            "ResponseEntity"
+          ]
+        },
+        {
+          "source": "org.springframework.validation.FieldError",
+          "specifiers": [
+            "FieldError"
+          ]
+        },
+        {
+          "source": "org.springframework.web.bind.MethodArgumentNotValidException",
+          "specifiers": [
+            "MethodArgumentNotValidException"
+          ]
+        },
+        {
+          "source": "org.springframework.web.bind.annotation.ExceptionHandler",
+          "specifiers": [
+            "ExceptionHandler"
+          ]
+        },
+        {
+          "source": "org.springframework.web.bind.annotation.RestControllerAdvice",
+          "specifiers": [
+            "RestControllerAdvice"
+          ]
+        },
+        {
+          "source": "org.springframework.web.context.request.WebRequest",
+          "specifiers": [
+            "WebRequest"
+          ]
+        }
+      ],
+      "exports": [
+        "handleProductNotFoundException",
+        "handleValidationExceptions",
+        "handleGlobalException",
+        "GlobalExceptionHandler"
+      ],
+      "totalLines": 67,
+      "hasStructuralAnalysis": true
+    },
+    "./docker-compose.yaml": {
+      "filePath": "./docker-compose.yaml",
+      "contentHash": "f79fe39030e758308ef0ac6218ecef98aa22822c14fd4dff1ba0be676f490282",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 73,
+      "hasStructuralAnalysis": true
+    },
+    "./gateway-service/Dockerfile": {
+      "filePath": "./gateway-service/Dockerfile",
+      "contentHash": "3b99d28fda54791b8f45cb693422e6a692299a6de556d7e1b796da8d3a6f3f40",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    "./gateway-service/pom.xml": {
+      "filePath": "./gateway-service/pom.xml",
+      "contentHash": "3eebbb0b451f6011bd3f9772c104790b313890006e0eac72474467af8a9f4c4c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 100,
+      "hasStructuralAnalysis": false
+    },
+    "./gateway-service/README.md": {
+      "filePath": "./gateway-service/README.md",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "./gateway-service/src/main/resources/application.yaml": {
+      "filePath": "./gateway-service/src/main/resources/application.yaml",
+      "contentHash": "8ee6dc0791491000b45ffee17b68a802d020589852da1b20e8847cce6d308dc5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "./gateway-service/src/main/java/com/genai/retail/gateway/util/JwtUtil.java": {
+      "filePath": "./gateway-service/src/main/java/com/genai/retail/gateway/util/JwtUtil.java",
+      "contentHash": "4e62d7c6468fd795bb60a86f73a2e168cfc6c9067dd0dd5a6fbeb755a5b575ae",
+      "functions": [
+        {
+          "name": "getSigningKey",
+          "params": [],
+          "returnType": "Key",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "extractClaims",
+          "params": [
+            "token"
+          ],
+          "returnType": "Claims",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "validateToken",
+          "params": [
+            "token"
+          ],
+          "returnType": "boolean",
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "classes": [
+        {
+          "name": "JwtUtil",
+          "methods": [
+            "getSigningKey",
+            "extractClaims",
+            "validateToken"
+          ],
+          "properties": [
+            "secret"
+          ],
+          "exported": true,
+          "lineCount": 34
+        }
+      ],
+      "imports": [
+        {
+          "source": "io.jsonwebtoken.Claims",
+          "specifiers": [
+            "Claims"
+          ]
+        },
+        {
+          "source": "io.jsonwebtoken.Jwts",
+          "specifiers": [
+            "Jwts"
+          ]
+        },
+        {
+          "source": "io.jsonwebtoken.security.Keys",
+          "specifiers": [
+            "Keys"
+          ]
+        },
+        {
+          "source": "java.security.Key",
+          "specifiers": [
+            "Key"
+          ]
+        },
+        {
+          "source": "org.springframework.beans.factory.annotation.Value",
+          "specifiers": [
+            "Value"
+          ]
+        },
+        {
+          "source": "org.springframework.stereotype.Component",
+          "specifiers": [
+            "Component"
+          ]
+        }
+      ],
+      "exports": [
+        "extractClaims",
+        "validateToken",
+        "JwtUtil"
+      ],
+      "totalLines": 43,
+      "hasStructuralAnalysis": true
+    },
+    "./gateway-service/src/main/java/com/genai/retail/gateway/config/SecurityConfig.java": {
+      "filePath": "./gateway-service/src/main/java/com/genai/retail/gateway/config/SecurityConfig.java",
+      "contentHash": "d1c22047be3f1a4a4c2c4ec71570b9bb5aa67953ae96ede1fe97eae2563e790d",
+      "functions": [
+        {
+          "name": "securityFilterChain",
+          "params": [
+            "http"
+          ],
+          "returnType": "SecurityFilterChain",
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "classes": [
+        {
+          "name": "SecurityConfig",
+          "methods": [
+            "securityFilterChain"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 16
+        }
+      ],
+      "imports": [
+        {
+          "source": "org.springframework.context.annotation.Bean",
+          "specifiers": [
+            "Bean"
+          ]
+        },
+        {
+          "source": "org.springframework.context.annotation.Configuration",
+          "specifiers": [
+            "Configuration"
+          ]
+        },
+        {
+          "source": "org.springframework.security.config.Customizer",
+          "specifiers": [
+            "Customizer"
+          ]
+        },
+        {
+          "source": "org.springframework.security.config.annotation.web.builders.HttpSecurity",
+          "specifiers": [
+            "HttpSecurity"
+          ]
+        },
+        {
+          "source": "org.springframework.security.web.SecurityFilterChain",
+          "specifiers": [
+            "SecurityFilterChain"
+          ]
+        }
+      ],
+      "exports": [
+        "securityFilterChain",
+        "SecurityConfig"
+      ],
+      "totalLines": 24,
+      "hasStructuralAnalysis": true
+    },
+    "./gateway-service/src/main/java/com/genai/retail/gateway/config/RouteConfig.java": {
+      "filePath": "./gateway-service/src/main/java/com/genai/retail/gateway/config/RouteConfig.java",
+      "contentHash": "62ec2159555b6e2b70f9525b19d404d749fce62cddf9b27ec02b6f33c8c14908",
+      "functions": [
+        {
+          "name": "authServiceRoutes",
+          "params": [],
+          "returnType": "RouterFunction<ServerResponse>",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "productServiceRoutes",
+          "params": [],
+          "returnType": "RouterFunction<ServerResponse>",
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [
+        {
+          "name": "RouteConfig",
+          "methods": [
+            "authServiceRoutes",
+            "productServiceRoutes"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 20
+        }
+      ],
+      "imports": [
+        {
+          "source": "org.springframework.cloud.gateway.server.mvc.filter.BeforeFilterFunctions.uri",
+          "specifiers": [
+            "uri"
+          ]
+        },
+        {
+          "source": "org.springframework.cloud.gateway.server.mvc.handler.GatewayRouterFunctions.route",
+          "specifiers": [
+            "route"
+          ]
+        },
+        {
+          "source": "org.springframework.cloud.gateway.server.mvc.handler.HandlerFunctions.http",
+          "specifiers": [
+            "http"
+          ]
+        },
+        {
+          "source": "org.springframework.cloud.gateway.server.mvc.predicate.GatewayRequestPredicates.path",
+          "specifiers": [
+            "path"
+          ]
+        },
+        {
+          "source": "org.springframework.context.annotation.Bean",
+          "specifiers": [
+            "Bean"
+          ]
+        },
+        {
+          "source": "org.springframework.context.annotation.Configuration",
+          "specifiers": [
+            "Configuration"
+          ]
+        },
+        {
+          "source": "org.springframework.web.servlet.function.RouterFunction",
+          "specifiers": [
+            "RouterFunction"
+          ]
+        },
+        {
+          "source": "org.springframework.web.servlet.function.ServerResponse",
+          "specifiers": [
+            "ServerResponse"
+          ]
+        }
+      ],
+      "exports": [
+        "authServiceRoutes",
+        "productServiceRoutes",
+        "RouteConfig"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "./gateway-service/src/main/java/com/genai/retail/gateway/GatewayServiceApplication.java": {
+      "filePath": "./gateway-service/src/main/java/com/genai/retail/gateway/GatewayServiceApplication.java",
+      "contentHash": "d4395d70927dc0504f1821f9aa7d83416977677788ee68069accfd97bdec1aa2",
+      "functions": [
+        {
+          "name": "main",
+          "params": [
+            "args"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [
+        {
+          "name": "GatewayServiceApplication",
+          "methods": [
+            "main"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 11
+        }
+      ],
+      "imports": [
+        {
+          "source": "org.springframework.boot.SpringApplication",
+          "specifiers": [
+            "SpringApplication"
+          ]
+        },
+        {
+          "source": "org.springframework.boot.autoconfigure.SpringBootApplication",
+          "specifiers": [
+            "SpringBootApplication"
+          ]
+        }
+      ],
+      "exports": [
+        "main",
+        "GatewayServiceApplication"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "./gateway-service/src/main/java/com/genai/retail/gateway/filter/JwtAuthenticationFilter.java": {
+      "filePath": "./gateway-service/src/main/java/com/genai/retail/gateway/filter/JwtAuthenticationFilter.java",
+      "contentHash": "1160368296276434775f7990eeb8a9f67b9fc1132e52c09969adb593cf60308c",
+      "functions": [
+        {
+          "name": "doFilterInternal",
+          "params": [
+            "request",
+            "response",
+            "filterChain"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 39
+        }
+      ],
+      "classes": [
+        {
+          "name": "JwtAuthenticationFilter",
+          "methods": [
+            "doFilterInternal"
+          ],
+          "properties": [
+            "jwtUtil"
+          ],
+          "exported": true,
+          "lineCount": 46
+        }
+      ],
+      "imports": [
+        {
+          "source": "com.genai.retail.gateway.util.JwtUtil",
+          "specifiers": [
+            "JwtUtil"
+          ]
+        },
+        {
+          "source": "io.jsonwebtoken.Claims",
+          "specifiers": [
+            "Claims"
+          ]
+        },
+        {
+          "source": "jakarta.servlet.FilterChain",
+          "specifiers": [
+            "FilterChain"
+          ]
+        },
+        {
+          "source": "jakarta.servlet.ServletException",
+          "specifiers": [
+            "ServletException"
+          ]
+        },
+        {
+          "source": "jakarta.servlet.http.HttpServletRequest",
+          "specifiers": [
+            "HttpServletRequest"
+          ]
+        },
+        {
+          "source": "jakarta.servlet.http.HttpServletResponse",
+          "specifiers": [
+            "HttpServletResponse"
+          ]
+        },
+        {
+          "source": "java.io.IOException",
+          "specifiers": [
+            "IOException"
+          ]
+        },
+        {
+          "source": "lombok.RequiredArgsConstructor",
+          "specifiers": [
+            "RequiredArgsConstructor"
+          ]
+        },
+        {
+          "source": "org.springframework.http.HttpHeaders",
+          "specifiers": [
+            "HttpHeaders"
+          ]
+        },
+        {
+          "source": "org.springframework.stereotype.Component",
+          "specifiers": [
+            "Component"
+          ]
+        },
+        {
+          "source": "org.springframework.web.filter.OncePerRequestFilter",
+          "specifiers": [
+            "OncePerRequestFilter"
+          ]
+        }
+      ],
+      "exports": [
+        "JwtAuthenticationFilter"
+      ],
+      "totalLines": 60,
+      "hasStructuralAnalysis": true
+    },
+    "./agents/opentelemetry-javaagent.jar": {
+      "filePath": "./agents/opentelemetry-javaagent.jar",
+      "contentHash": "6d507604426d5850ac4506e88e123c4fd9f1fa7b9f31a34d4d1c70a85370cfa5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 82096,
+      "hasStructuralAnalysis": false
+    },
+    "./README.md": {
+      "filePath": "./README.md",
+      "contentHash": "4c9f419de695e497d6b1c8c8d462d927edf364f16fb3dedd3b07b99e619ec1bd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "./otel-collector-config.yaml": {
+      "filePath": "./otel-collector-config.yaml",
+      "contentHash": "37ec045b23b6ae8ba6e3f69de4ac21a74ca2a17cd4bfe7cee4989481fe0c8997",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 22,
+      "hasStructuralAnalysis": true
+    },
+    "./init-db.sql": {
+      "filePath": "./init-db.sql",
+      "contentHash": "747940a8b81082206ba5640bee6c13c28fb315d3aef2eb959f934344234a10f6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": true
+    },
+    "./auth-service/Dockerfile": {
+      "filePath": "./auth-service/Dockerfile",
+      "contentHash": "7bfe28fcc7fa6c5a20e805453eb1e285921f544165f4ccd4e1c9a7edfe159964",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    "./auth-service/pom.xml": {
+      "filePath": "./auth-service/pom.xml",
+      "contentHash": "8bc4d41b241692942a298c868748265ae51ec00294a4202dd308d0c4bc9c6bdf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 94,
+      "hasStructuralAnalysis": false
+    },
+    "./auth-service/src/main/resources/application.yaml": {
+      "filePath": "./auth-service/src/main/resources/application.yaml",
+      "contentHash": "7cdbd10a4194167bbac73212ddb27fd552caba50f756148ffc8cb77069e6f8a1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 47,
+      "hasStructuralAnalysis": true
+    },
+    "./auth-service/src/main/java/com/genai/retail/auth/dto/RegisterRequest.java": {
+      "filePath": "./auth-service/src/main/java/com/genai/retail/auth/dto/RegisterRequest.java",
+      "contentHash": "3d57c46a668b77ec7790d22d837460206b1d6baa345a2738908899ed25efdab7",
+      "functions": [],
+      "classes": [
+        {
+          "name": "RegisterRequest",
+          "methods": [],
+          "properties": [
+            "email",
+            "password"
+          ],
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "imports": [
+        {
+          "source": "jakarta.validation.constraints.Email",
+          "specifiers": [
+            "Email"
+          ]
+        },
+        {
+          "source": "jakarta.validation.constraints.NotBlank",
+          "specifiers": [
+            "NotBlank"
+          ]
+        },
+        {
+          "source": "lombok.Data",
+          "specifiers": [
+            "Data"
+          ]
+        }
+      ],
+      "exports": [
+        "RegisterRequest"
+      ],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    "./auth-service/src/main/java/com/genai/retail/auth/dto/AuthResponse.java": {
+      "filePath": "./auth-service/src/main/java/com/genai/retail/auth/dto/AuthResponse.java",
+      "contentHash": "13d57b077f486da695ba6341a32371f09b2ecbde207cbb3d1ada636dafd7ee40",
+      "functions": [],
+      "classes": [
+        {
+          "name": "AuthResponse",
+          "methods": [],
+          "properties": [
+            "token",
+            "email",
+            "role"
+          ],
+          "exported": true,
+          "lineCount": 10
+        }
+      ],
+      "imports": [
+        {
+          "source": "lombok.Builder",
+          "specifiers": [
+            "Builder"
+          ]
+        },
+        {
+          "source": "lombok.Data",
+          "specifiers": [
+            "Data"
+          ]
+        }
+      ],
+      "exports": [
+        "AuthResponse"
+      ],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    "./auth-service/src/main/java/com/genai/retail/auth/dto/LoginRequest.java": {
+      "filePath": "./auth-service/src/main/java/com/genai/retail/auth/dto/LoginRequest.java",
+      "contentHash": "c1f751852424f1373db1e82446dae2fef89a2d9c6a39c39a549f8ec116924910",
+      "functions": [],
+      "classes": [
+        {
+          "name": "LoginRequest",
+          "methods": [],
+          "properties": [
+            "email",
+            "password"
+          ],
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "imports": [
+        {
+          "source": "jakarta.validation.constraints.Email",
+          "specifiers": [
+            "Email"
+          ]
+        },
+        {
+          "source": "jakarta.validation.constraints.NotBlank",
+          "specifiers": [
+            "NotBlank"
+          ]
+        },
+        {
+          "source": "lombok.Data",
+          "specifiers": [
+            "Data"
+          ]
+        }
+      ],
+      "exports": [
+        "LoginRequest"
+      ],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    "./auth-service/src/main/java/com/genai/retail/auth/repository/UserRepository.java": {
+      "filePath": "./auth-service/src/main/java/com/genai/retail/auth/repository/UserRepository.java",
+      "contentHash": "84559997b5b4a16f1b8bd8b8aefad15e931a20b5e63dacb6dd27fb135812976f",
+      "functions": [],
+      "classes": [
+        {
+          "name": "UserRepository",
+          "methods": [
+            "findByEmail"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "imports": [
+        {
+          "source": "com.genai.retail.auth.entity.User",
+          "specifiers": [
+            "User"
+          ]
+        },
+        {
+          "source": "java.util.Optional",
+          "specifiers": [
+            "Optional"
+          ]
+        },
+        {
+          "source": "org.springframework.data.jpa.repository.JpaRepository",
+          "specifiers": [
+            "JpaRepository"
+          ]
+        }
+      ],
+      "exports": [
+        "UserRepository"
+      ],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "./auth-service/src/main/java/com/genai/retail/auth/AuthServiceApplication.java": {
+      "filePath": "./auth-service/src/main/java/com/genai/retail/auth/AuthServiceApplication.java",
+      "contentHash": "20a65b611525e6d8bfe0df302f2292f158a8e26b6a3193497f85c06889f53e55",
+      "functions": [
+        {
+          "name": "main",
+          "params": [
+            "args"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthServiceApplication",
+          "methods": [
+            "main"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 11
+        }
+      ],
+      "imports": [
+        {
+          "source": "org.springframework.boot.SpringApplication",
+          "specifiers": [
+            "SpringApplication"
+          ]
+        },
+        {
+          "source": "org.springframework.boot.autoconfigure.SpringBootApplication",
+          "specifiers": [
+            "SpringBootApplication"
+          ]
+        }
+      ],
+      "exports": [
+        "main",
+        "AuthServiceApplication"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "./auth-service/src/main/java/com/genai/retail/auth/util/JwtUtil.java": {
+      "filePath": "./auth-service/src/main/java/com/genai/retail/auth/util/JwtUtil.java",
+      "contentHash": "7cb4f20825d1d2c334b4b78eb37941b1f7efa4ac9125804af7b915e1ef0fd66d",
+      "functions": [
+        {
+          "name": "getSigningKey",
+          "params": [],
+          "returnType": "Key",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "generateToken",
+          "params": [
+            "email",
+            "role"
+          ],
+          "returnType": "String",
+          "exported": true,
+          "lineCount": 21
+        }
+      ],
+      "classes": [
+        {
+          "name": "JwtUtil",
+          "methods": [
+            "getSigningKey",
+            "generateToken"
+          ],
+          "properties": [
+            "secret",
+            "expiration"
+          ],
+          "exported": true,
+          "lineCount": 36
+        }
+      ],
+      "imports": [
+        {
+          "source": "io.jsonwebtoken.Jwts",
+          "specifiers": [
+            "Jwts"
+          ]
+        },
+        {
+          "source": "io.jsonwebtoken.SignatureAlgorithm",
+          "specifiers": [
+            "SignatureAlgorithm"
+          ]
+        },
+        {
+          "source": "io.jsonwebtoken.security.Keys",
+          "specifiers": [
+            "Keys"
+          ]
+        },
+        {
+          "source": "java.security.Key",
+          "specifiers": [
+            "Key"
+          ]
+        },
+        {
+          "source": "java.util.Date",
+          "specifiers": [
+            "Date"
+          ]
+        },
+        {
+          "source": "org.springframework.beans.factory.annotation.Value",
+          "specifiers": [
+            "Value"
+          ]
+        },
+        {
+          "source": "org.springframework.stereotype.Component",
+          "specifiers": [
+            "Component"
+          ]
+        }
+      ],
+      "exports": [
+        "generateToken",
+        "JwtUtil"
+      ],
+      "totalLines": 46,
+      "hasStructuralAnalysis": true
+    },
+    "./auth-service/src/main/java/com/genai/retail/auth/config/TracingConfig.java": {
+      "filePath": "./auth-service/src/main/java/com/genai/retail/auth/config/TracingConfig.java",
+      "contentHash": "293904afdc47fbfed79ddf4d9c136c7a8001a4a9e4c5fd1cd14abf9a0aea40d8",
+      "functions": [
+        {
+          "name": "setup",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [
+        {
+          "name": "TracingConfig",
+          "methods": [
+            "setup"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 39
+        }
+      ],
+      "imports": [
+        {
+          "source": "io.micrometer.context.ContextRegistry",
+          "specifiers": [
+            "ContextRegistry"
+          ]
+        },
+        {
+          "source": "io.micrometer.context.ThreadLocalAccessor",
+          "specifiers": [
+            "ThreadLocalAccessor"
+          ]
+        },
+        {
+          "source": "jakarta.annotation.PostConstruct",
+          "specifiers": [
+            "PostConstruct"
+          ]
+        },
+        {
+          "source": "org.slf4j.MDC",
+          "specifiers": [
+            "MDC"
+          ]
+        },
+        {
+          "source": "org.springframework.context.annotation.Configuration",
+          "specifiers": [
+            "Configuration"
+          ]
+        }
+      ],
+      "exports": [
+        "setup",
+        "TracingConfig"
+      ],
+      "totalLines": 47,
+      "hasStructuralAnalysis": true
+    },
+    "./auth-service/src/main/java/com/genai/retail/auth/config/SecurityConfig.java": {
+      "filePath": "./auth-service/src/main/java/com/genai/retail/auth/config/SecurityConfig.java",
+      "contentHash": "1277eba7cd86f2f554380505e0cd34f97c2367391dacf3ad31c2e4948de91b2d",
+      "functions": [
+        {
+          "name": "securityFilterChain",
+          "params": [
+            "http"
+          ],
+          "returnType": "SecurityFilterChain",
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "classes": [
+        {
+          "name": "SecurityConfig",
+          "methods": [
+            "securityFilterChain"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 17
+        }
+      ],
+      "imports": [
+        {
+          "source": "org.springframework.context.annotation.Bean",
+          "specifiers": [
+            "Bean"
+          ]
+        },
+        {
+          "source": "org.springframework.context.annotation.Configuration",
+          "specifiers": [
+            "Configuration"
+          ]
+        },
+        {
+          "source": "org.springframework.security.config.Customizer",
+          "specifiers": [
+            "Customizer"
+          ]
+        },
+        {
+          "source": "org.springframework.security.config.annotation.web.builders.HttpSecurity",
+          "specifiers": [
+            "HttpSecurity"
+          ]
+        },
+        {
+          "source": "org.springframework.security.web.SecurityFilterChain",
+          "specifiers": [
+            "SecurityFilterChain"
+          ]
+        }
+      ],
+      "exports": [
+        "securityFilterChain",
+        "SecurityConfig"
+      ],
+      "totalLines": 25,
+      "hasStructuralAnalysis": true
+    },
+    "./auth-service/src/main/java/com/genai/retail/auth/config/OpenApiConfig.java": {
+      "filePath": "./auth-service/src/main/java/com/genai/retail/auth/config/OpenApiConfig.java",
+      "contentHash": "3e99460ee6b20e8364db8024e7a19bf7c9becbe9df069d2ab609a3846041229b",
+      "functions": [
+        {
+          "name": "customOpenAPI",
+          "params": [],
+          "returnType": "OpenAPI",
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "classes": [
+        {
+          "name": "OpenApiConfig",
+          "methods": [
+            "customOpenAPI"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 17
+        }
+      ],
+      "imports": [
+        {
+          "source": "io.swagger.v3.oas.models.OpenAPI",
+          "specifiers": [
+            "OpenAPI"
+          ]
+        },
+        {
+          "source": "io.swagger.v3.oas.models.info.Info",
+          "specifiers": [
+            "Info"
+          ]
+        },
+        {
+          "source": "org.springframework.context.annotation.Bean",
+          "specifiers": [
+            "Bean"
+          ]
+        },
+        {
+          "source": "org.springframework.context.annotation.Configuration",
+          "specifiers": [
+            "Configuration"
+          ]
+        }
+      ],
+      "exports": [
+        "customOpenAPI",
+        "OpenApiConfig"
+      ],
+      "totalLines": 24,
+      "hasStructuralAnalysis": true
+    },
+    "./auth-service/src/main/java/com/genai/retail/auth/config/PasswordConfig.java": {
+      "filePath": "./auth-service/src/main/java/com/genai/retail/auth/config/PasswordConfig.java",
+      "contentHash": "4cc78ea75543e0404dff64bf1fcb1c387cc928e88dbf60c81850aa5abce96ce3",
+      "functions": [
+        {
+          "name": "passwordEncoder",
+          "params": [],
+          "returnType": "PasswordEncoder",
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "classes": [
+        {
+          "name": "PasswordConfig",
+          "methods": [
+            "passwordEncoder"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "imports": [
+        {
+          "source": "org.springframework.context.annotation.Bean",
+          "specifiers": [
+            "Bean"
+          ]
+        },
+        {
+          "source": "org.springframework.context.annotation.Configuration",
+          "specifiers": [
+            "Configuration"
+          ]
+        },
+        {
+          "source": "org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder",
+          "specifiers": [
+            "BCryptPasswordEncoder"
+          ]
+        },
+        {
+          "source": "org.springframework.security.crypto.password.PasswordEncoder",
+          "specifiers": [
+            "PasswordEncoder"
+          ]
+        }
+      ],
+      "exports": [
+        "passwordEncoder",
+        "PasswordConfig"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "./auth-service/src/main/java/com/genai/retail/auth/entity/User.java": {
+      "filePath": "./auth-service/src/main/java/com/genai/retail/auth/entity/User.java",
+      "contentHash": "504703b9e3ebbca07eb8ab36320cd2181aebbcc4e630e3ae716012407e64fd3c",
+      "functions": [],
+      "classes": [
+        {
+          "name": "User",
+          "methods": [],
+          "properties": [
+            "id",
+            "email",
+            "password",
+            "role",
+            "active",
+            "createdAt"
+          ],
+          "exported": true,
+          "lineCount": 24
+        }
+      ],
+      "imports": [
+        {
+          "source": "jakarta.persistence",
+          "specifiers": [
+            "*"
+          ]
+        },
+        {
+          "source": "java.time.LocalDateTime",
+          "specifiers": [
+            "LocalDateTime"
+          ]
+        }
+      ],
+      "exports": [
+        "User"
+      ],
+      "totalLines": 31,
+      "hasStructuralAnalysis": true
+    },
+    "./auth-service/src/main/java/com/genai/retail/auth/controller/AuthController.java": {
+      "filePath": "./auth-service/src/main/java/com/genai/retail/auth/controller/AuthController.java",
+      "contentHash": "82208e6f35209cb43cbac4ee3b3efc49ce8f07202b27562a90b63f4438941224",
+      "functions": [
+        {
+          "name": "register",
+          "params": [
+            "request"
+          ],
+          "returnType": "AuthResponse",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "login",
+          "params": [
+            "request"
+          ],
+          "returnType": "AuthResponse",
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthController",
+          "methods": [
+            "register",
+            "login"
+          ],
+          "properties": [
+            "authService"
+          ],
+          "exported": true,
+          "lineCount": 19
+        }
+      ],
+      "imports": [
+        {
+          "source": "com.genai.retail.auth.dto.AuthResponse",
+          "specifiers": [
+            "AuthResponse"
+          ]
+        },
+        {
+          "source": "com.genai.retail.auth.dto.LoginRequest",
+          "specifiers": [
+            "LoginRequest"
+          ]
+        },
+        {
+          "source": "com.genai.retail.auth.dto.RegisterRequest",
+          "specifiers": [
+            "RegisterRequest"
+          ]
+        },
+        {
+          "source": "com.genai.retail.auth.service.AuthService",
+          "specifiers": [
+            "AuthService"
+          ]
+        },
+        {
+          "source": "jakarta.validation.Valid",
+          "specifiers": [
+            "Valid"
+          ]
+        },
+        {
+          "source": "lombok.RequiredArgsConstructor",
+          "specifiers": [
+            "RequiredArgsConstructor"
+          ]
+        },
+        {
+          "source": "org.springframework.web.bind.annotation.PostMapping",
+          "specifiers": [
+            "PostMapping"
+          ]
+        },
+        {
+          "source": "org.springframework.web.bind.annotation.RequestBody",
+          "specifiers": [
+            "RequestBody"
+          ]
+        },
+        {
+          "source": "org.springframework.web.bind.annotation.RequestMapping",
+          "specifiers": [
+            "RequestMapping"
+          ]
+        },
+        {
+          "source": "org.springframework.web.bind.annotation.RestController",
+          "specifiers": [
+            "RestController"
+          ]
+        }
+      ],
+      "exports": [
+        "register",
+        "login",
+        "AuthController"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "./auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java": {
+      "filePath": "./auth-service/src/main/java/com/genai/retail/auth/service/AuthService.java",
+      "contentHash": "986ce565e5dd223080e248bc7de3001c84664fe8e3d91b1a080e6315577ceff3",
+      "functions": [
+        {
+          "name": "register",
+          "params": [
+            "request"
+          ],
+          "returnType": "AuthResponse",
+          "exported": true,
+          "lineCount": 35
+        },
+        {
+          "name": "login",
+          "params": [
+            "request"
+          ],
+          "returnType": "AuthResponse",
+          "exported": true,
+          "lineCount": 33
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthService",
+          "methods": [
+            "register",
+            "login"
+          ],
+          "properties": [
+            "userRepository",
+            "passwordEncoder",
+            "jwtUtil"
+          ],
+          "exported": true,
+          "lineCount": 80
+        }
+      ],
+      "imports": [
+        {
+          "source": "com.genai.retail.auth.dto.AuthResponse",
+          "specifiers": [
+            "AuthResponse"
+          ]
+        },
+        {
+          "source": "com.genai.retail.auth.dto.LoginRequest",
+          "specifiers": [
+            "LoginRequest"
+          ]
+        },
+        {
+          "source": "com.genai.retail.auth.dto.RegisterRequest",
+          "specifiers": [
+            "RegisterRequest"
+          ]
+        },
+        {
+          "source": "com.genai.retail.auth.entity.User",
+          "specifiers": [
+            "User"
+          ]
+        },
+        {
+          "source": "com.genai.retail.auth.repository.UserRepository",
+          "specifiers": [
+            "UserRepository"
+          ]
+        },
+        {
+          "source": "com.genai.retail.auth.util.JwtUtil",
+          "specifiers": [
+            "JwtUtil"
+          ]
+        },
+        {
+          "source": "java.time.LocalDateTime",
+          "specifiers": [
+            "LocalDateTime"
+          ]
+        },
+        {
+          "source": "lombok.RequiredArgsConstructor",
+          "specifiers": [
+            "RequiredArgsConstructor"
+          ]
+        },
+        {
+          "source": "org.springframework.security.crypto.password.PasswordEncoder",
+          "specifiers": [
+            "PasswordEncoder"
+          ]
+        },
+        {
+          "source": "org.springframework.stereotype.Service",
+          "specifiers": [
+            "Service"
+          ]
+        }
+      ],
+      "exports": [
+        "register",
+        "login",
+        "AuthService"
+      ],
+      "totalLines": 93,
+      "hasStructuralAnalysis": true
+    },
+    "./auth-service/src/main/java/com/genai/retail/auth/exception/GlobalExceptionHandler.java": {
+      "filePath": "./auth-service/src/main/java/com/genai/retail/auth/exception/GlobalExceptionHandler.java",
+      "contentHash": "c4af1c98089bae343ab84399835f4e0b59999a991ef442fd98ea0758440ed9f3",
+      "functions": [
+        {
+          "name": "handleRuntimeException",
+          "params": [
+            "ex"
+          ],
+          "returnType": "ResponseEntity<Map<String, Object>>",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "handleValidationException",
+          "params": [
+            "ex"
+          ],
+          "returnType": "ResponseEntity<Map<String, Object>>",
+          "exported": true,
+          "lineCount": 20
+        }
+      ],
+      "classes": [
+        {
+          "name": "GlobalExceptionHandler",
+          "methods": [
+            "handleRuntimeException",
+            "handleValidationException"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 39
+        }
+      ],
+      "imports": [
+        {
+          "source": "java.time.LocalDateTime",
+          "specifiers": [
+            "LocalDateTime"
+          ]
+        },
+        {
+          "source": "java.util.HashMap",
+          "specifiers": [
+            "HashMap"
+          ]
+        },
+        {
+          "source": "java.util.Map",
+          "specifiers": [
+            "Map"
+          ]
+        },
+        {
+          "source": "org.springframework.http.HttpStatus",
+          "specifiers": [
+            "HttpStatus"
+          ]
+        },
+        {
+          "source": "org.springframework.http.ResponseEntity",
+          "specifiers": [
+            "ResponseEntity"
+          ]
+        },
+        {
+          "source": "org.springframework.web.bind.MethodArgumentNotValidException",
+          "specifiers": [
+            "MethodArgumentNotValidException"
+          ]
+        },
+        {
+          "source": "org.springframework.web.bind.annotation.ExceptionHandler",
+          "specifiers": [
+            "ExceptionHandler"
+          ]
+        },
+        {
+          "source": "org.springframework.web.bind.annotation.RestControllerAdvice",
+          "specifiers": [
+            "RestControllerAdvice"
+          ]
+        }
+      ],
+      "exports": [
+        "handleRuntimeException",
+        "handleValidationException",
+        "GlobalExceptionHandler"
+      ],
+      "totalLines": 50,
+      "hasStructuralAnalysis": true
+    }
+  }
+}
